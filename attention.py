@@ -14,7 +14,7 @@ class SelfAttention(nn.Module):
         self.d_head = d_embed // n_heads
 
     def forward(self, x: torch.Tensor, causal_mask=False):
-        # x: (batch, Seq_len, dim)
+        # x-: (batch, Seq_len, dim)
 
         input_shape = x.shape
         batch_size, sequence_length = input_shape
